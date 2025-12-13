@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Saturn · Level 6 – Debugging &amp; Logic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+<header class="header">
+  <nav class="header__nav">
+    <div class="container">
+      <div class="header__container">
+        <div class="logo">fillSpace</div>
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Galaxy</a></li>
+          <li><a href="sun.html" class="header__nav-link">Sun</a></li>
+          <li><a href="mercury.html" class="header__nav-link">Mercury</a></li>
+          <li><a href="venus.html" class="header__nav-link">Venus</a></li>
+          <li><a href="earth.html" class="header__nav-link">Earth</a></li>
+          <li><a href="mars.html" class="header__nav-link">Mars</a></li>
+          <li><a href="jupiter.html" class="header__nav-link">Jupiter</a></li>
+          <li><a href="saturn.html" class="header__nav-link">Saturn</a></li>
+          <li><a href="uran.html" class="header__nav-link">Uran</a></li>
+          <li><a href="neptune.html" class="header__nav-link">Neptune</a></li>
+          <li><a href="moon.html" class="header__nav-link">Moon</a></li>
+          <li><a href="meteorite.html" class="header__nav-link">Meteorite</a></li>
+          <li><a href="pluto.html" class="header__nav-link">Pluto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="page-container">
+
+    <section class="page-hero">
+      <span class="page-hero-label">Cheatsheet</span>
+      <h1 class="page-hero-title">Saturn · Level 6 – Debugging &amp; Logic</h1>
+      <p class="page-hero-subtitle">
+        Bugs, debugging with print(), syntax vs runtime errors, logical operators.
+      </p>
+      <div class="page-hero-meta">
+        <span class="page-pill">bug</span>
+        <span class="page-pill">debugger</span>
+        <span class="page-pill">and/or/not</span>
+        <span class="page-pill">errors</span>
+      </div>
+            <a href="index.html" class="page-back-link">Back to Galaxy</a>
+
+      <img src="images/saturn.png"
+           alt="Saturn"
+           class="page-planet-image">
+    </section>
+
+    </section>
+
+    <section class="page-section">
+      <h2>1. What is a bug?</h2>
+      <p>
+        A <strong>bug</strong> is an error or defect in the code that causes incorrect behavior.
+      </p>
+      <ul>
+        <li>Program crashes.</li>
+        <li>Wrong results.</li>
+        <li>Unexpected behavior.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>2. Debugging with print()</h2>
+      <p>
+        One simple debugging technique is to use <code>print()</code> to show values at different points in the code.
+      </p>
+      <div class="page-code">
+def divide(a, b):
+    print("a =", a, "b =", b)   # debug print
+    return a / b
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>3. Boolean expressions with and/or</h2>
+      <p>
+        Logical operators combine conditions:
+      </p>
+      <ul>
+        <li><code>and</code> – both conditions must be True.</li>
+        <li><code>or</code> – at least one condition must be True.</li>
+        <li><code>not</code> – inverts True/False.</li>
+      </ul>
+      <div class="page-code">
+print(2 == 2 and 3 &gt; 5)   # False
+print(2 == 2 or 3 &gt; 5)    # True
+print(not True)            # False
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>4. Syntax errors</h2>
+      <p>
+        A <strong>syntax error</strong> means the code is written incorrectly and Python cannot parse it.
+      </p>
+      <div class="page-code">
+# Missing colon - syntax error:
+# if x &gt; 3
+#     print("Hi")
+
+# Correct:
+if x &gt; 3:
+    print("Hi")
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>5. Debugger tools</h2>
+      <p>
+        A <strong>debugger</strong> lets you run code step by step and inspect variables.
+      </p>
+      <ul>
+        <li>Set breakpoints.</li>
+        <li>Step into / over functions.</li>
+        <li>Watch variable values change.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>6. Logical operators usage</h2>
+      <p>
+        Use logical operators to build complex conditions in <code>if</code>-statements and loops.
+      </p>
+      <div class="page-code">
+age = 20
+has_id = True
+
+if age &gt;= 18 and has_id:
+    print("Access granted")
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>7. Runtime errors</h2>
+      <p>
+        A <strong>runtime error</strong> happens while the program is running, for example dividing by zero.
+      </p>
+      <div class="page-code">
+x = 10
+y = 0
+# x / y    # ZeroDivisionError at runtime
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>8. Bad debugging practice</h2>
+      <p>
+        Randomly changing code and hoping it works is <strong>not</strong> a good debugging strategy.  
+        Instead:
+      </p>
+      <ul>
+        <li>Reproduce the bug.</li>
+        <li>Find where it happens.</li>
+        <li>Inspect variables.</li>
+        <li>Fix the root cause.</li>
+      </ul>
+    </section>
+
+    <section class="page-section page-recap">
+      <h2>Level 6 – Recap</h2>
+      <ul>
+        <li>Bug = error in code.</li>
+        <li><code>print()</code> is a simple debugging tool.</li>
+        <li>Use <code>and</code>, <code>or</code>, <code>not</code> for logic.</li>
+        <li>Syntax errors: code cannot be parsed.</li>
+        <li>Runtime errors: happen during execution.</li>
+        <li>Debuggers help inspect variables step by step.</li>
+        <li>Good debugging = systematic, not random changes.</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+</body>
+</html>

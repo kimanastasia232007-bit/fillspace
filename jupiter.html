@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jupiter · Level 5 – Files &amp; Errors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+<header class="header">
+  <nav class="header__nav">
+    <div class="container">
+      <div class="header__container">
+        <div class="logo">fillSpace</div>
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Galaxy</a></li>
+          <li><a href="sun.html" class="header__nav-link">Sun</a></li>
+          <li><a href="mercury.html" class="header__nav-link">Mercury</a></li>
+          <li><a href="venus.html" class="header__nav-link">Venus</a></li>
+          <li><a href="earth.html" class="header__nav-link">Earth</a></li>
+          <li><a href="mars.html" class="header__nav-link">Mars</a></li>
+          <li><a href="jupiter.html" class="header__nav-link">Jupiter</a></li>
+          <li><a href="saturn.html" class="header__nav-link">Saturn</a></li>
+          <li><a href="uran.html" class="header__nav-link">Uran</a></li>
+          <li><a href="neptune.html" class="header__nav-link">Neptune</a></li>
+          <li><a href="moon.html" class="header__nav-link">Moon</a></li>
+          <li><a href="meteorite.html" class="header__nav-link">Meteorite</a></li>
+          <li><a href="pluto.html" class="header__nav-link">Pluto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="page-container">
+
+    <section class="page-hero">
+      <span class="page-hero-label">Cheatsheet</span>
+      <h1 class="page-hero-title">Jupiter · Level 5 – Files &amp; Errors</h1>
+      <p class="page-hero-subtitle">
+        Opening files, read modes, exceptions, try/except/finally and ValueError.
+      </p>
+      <div class="page-hero-meta">
+        <span class="page-pill">files</span>
+        <span class="page-pill">"r" mode</span>
+        <span class="page-pill">try/except</span>
+        <span class="page-pill">ValueError</span>
+      </div>
+           <a href="index.html" class="page-back-link">Back to Galaxy</a>
+
+      <img src="images/jupiter.png"
+           alt="Jupiter"
+           class="page-planet-image">
+    </section>
+
+    </section>
+
+    <section class="page-section">
+      <h2>1. Opening files – modes</h2>
+      <p>
+        <code>open()</code> takes a filename and a mode.  
+        For reading, use <strong><code>"r"</code></strong>.
+      </p>
+      <div class="page-code">
+f = open("data.txt", "r")   # read mode
+text = f.read()
+f.close()
+      </div>
+      <ul>
+        <li><code>"r"</code> – read (file must exist).</li>
+        <li><code>"w"</code> – write (creates/overwrites).</li>
+        <li><code>"a"</code> – append.</li>
+        <li><code>"x"</code> – create, fail if exists.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>2. Closing a file</h2>
+      <p>
+        Use <code>f.close()</code> to close a file object.
+      </p>
+      <div class="page-code">
+f = open("data.txt", "r")
+# ... work with f ...
+f.close()
+      </div>
+      <p>
+        Or use a <code>with</code>-statement to close automatically:
+      </p>
+      <div class="page-code">
+with open("data.txt", "r") as f:
+    text = f.read()
+# file is closed here
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>3. try / except</h2>
+      <p>
+        Use <code>try</code> to start a block of code that may raise an error.
+      </p>
+      <div class="page-code">
+try:
+    x = int("abc")   # will raise ValueError
+except ValueError:
+    print("Conversion failed")
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>4. Handling errors with except</h2>
+      <p>
+        <code>except</code> handles the error if it happens inside <code>try</code>.
+      </p>
+      <div class="page-code">
+try:
+    f = open("missing.txt", "r")
+except FileNotFoundError:
+    print("File not found")
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>5. int() and ValueError</h2>
+      <p>
+        <code>int()</code> converts strings to integers but can raise <code>ValueError</code>.
+      </p>
+      <div class="page-code">
+value = "123"
+n = int(value)     # 123
+
+bad = "abc"
+# int(bad)        # ValueError
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>6. finally block</h2>
+      <p>
+        <code>finally</code> runs <strong>always</strong>, whether an exception occurred or not.
+      </p>
+      <div class="page-code">
+f = None
+try:
+    f = open("data.txt", "r")
+    # read...
+except FileNotFoundError:
+    print("File missing")
+finally:
+    if f is not None:
+        f.close()
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>7. Opening non-existent file in &quot;r&quot; mode</h2>
+      <p>
+        If you open a non-existent file in <code>"r"</code> mode, Python raises <code>FileNotFoundError</code>.
+      </p>
+    </section>
+
+    <section class="page-section">
+      <h2>8. Why use try/except?</h2>
+      <p>
+        <code>try/except</code> prevents your program from crashing and lets you handle errors gracefully.
+      </p>
+      <div class="page-code">
+try:
+    price = float(input("Enter price: "))
+except ValueError:
+    print("Please enter a number, not text.")
+      </div>
+    </section>
+
+    <section class="page-section page-recap">
+      <h2>Level 5 – Recap</h2>
+      <ul>
+        <li><code>"r"</code> mode opens a file for reading.</li>
+        <li>Close files with <code>f.close()</code> or <code>with</code>-statement.</li>
+        <li><code>try</code> starts a block that might raise errors.</li>
+        <li><code>except</code> handles the error.</li>
+        <li><code>int()</code> can raise <code>ValueError</code> for invalid text.</li>
+        <li><code>finally</code> runs whether an exception occurs or not.</li>
+        <li>Opening a missing file in <code>"r"</code> raises <code>FileNotFoundError</code>.</li>
+        <li><code>try/except</code> helps avoid crashes and show user-friendly messages.</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'sand';
+    src: url(../fonts/Quicksand-Bold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'sand';
+    src: url(../fonts/Quicksand-Medium.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'sand';
+    src: url(../fonts/Quicksand-SemiBold.ttf);
+    font-weight: 500;
+}

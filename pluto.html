@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pluto · Level 12 – Data Analytics &amp; Dashboards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+<header class="header">
+  <nav class="header__nav">
+    <div class="container">
+      <div class="header__container">
+        <div class="logo">fillSpace</div>
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Galaxy</a></li>
+          <li><a href="sun.html" class="header__nav-link">Sun</a></li>
+          <li><a href="mercury.html" class="header__nav-link">Mercury</a></li>
+          <li><a href="venus.html" class="header__nav-link">Venus</a></li>
+          <li><a href="earth.html" class="header__nav-link">Earth</a></li>
+          <li><a href="mars.html" class="header__nav-link">Mars</a></li>
+          <li><a href="jupiter.html" class="header__nav-link">Jupiter</a></li>
+          <li><a href="saturn.html" class="header__nav-link">Saturn</a></li>
+          <li><a href="uran.html" class="header__nav-link">Uran</a></li>
+          <li><a href="neptune.html" class="header__nav-link">Neptune</a></li>
+          <li><a href="moon.html" class="header__nav-link">Moon</a></li>
+          <li><a href="meteorite.html" class="header__nav-link">Meteorite</a></li>
+          <li><a href="pluto.html" class="header__nav-link">Pluto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="page-container">
+
+    <section class="page-hero">
+      <span class="page-hero-label">Cheatsheet</span>
+      <h1 class="page-hero-title">Pluto · Level 12 – Data Analytics &amp; Dashboards</h1>
+      <p class="page-hero-subtitle">
+        Why we analyze data, matplotlib, KPIs, dashboards and data sources.
+      </p>
+      <div class="page-hero-meta">
+        <span class="page-pill">analytics</span>
+        <span class="page-pill">matplotlib</span>
+        <span class="page-pill">KPI</span>
+        <span class="page-pill">dashboards</span>
+      </div>
+            <a href="index.html" class="page-back-link">Back to Galaxy</a>
+
+      <img src="images/pluto.png"
+           alt="Pluto"
+           class="page-planet-image">
+    </section>
+
+    </section>
+
+    <section class="page-section">
+      <h2>1. Goal of data analytics in business</h2>
+      <p>
+        Main goal: <strong>make decisions based on data</strong>, not just intuition.
+      </p>
+      <ul>
+        <li>See trends in sales and costs.</li>
+        <li>Find best-selling products.</li>
+        <li>Understand customer behavior.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>2. matplotlib for visualization</h2>
+      <p>
+        <strong>matplotlib</strong> is a Python library used to create charts and plots.
+      </p>
+      <div class="page-code">
+import matplotlib.pyplot as plt
+
+days = ["Mon", "Tue", "Wed"]
+sales = [100, 140, 90]
+
+plt.plot(days, sales)
+plt.title("Sales per day")
+plt.show()
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>3. Example KPI for sales</h2>
+      <p>
+        A common KPI for sales is <strong>Monthly revenue</strong>.
+      </p>
+      <ul>
+        <li>Other examples: number of orders, average order value.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>4. Who uses dashboards?</h2>
+      <p>
+        Dashboards with daily sales, profit and orders are mainly used by:
+      </p>
+      <ul>
+        <li><strong>Decision makers and managers</strong>.</li>
+        <li>Team leads and analysts.</li>
+      </ul>
+      <p>
+        They use dashboards to decide what to do next.
+      </p>
+    </section>
+
+    <section class="page-section">
+      <h2>5. Data sources for dashboards</h2>
+      <p>
+        Dashboards usually take data from:
+      </p>
+      <ul>
+        <li>Databases (sales, inventory, customers).</li>
+        <li>CSV/Excel files with exported reports.</li>
+      </ul>
+      <p>
+        Images or audio are usually not used as main numeric data sources.
+      </p>
+    </section>
+
+    <section class="page-section">
+      <h2>6. Automatic refresh</h2>
+      <p>
+        In business programming, dashboards can refresh data automatically:
+      </p>
+      <ul>
+        <li>Every hour.</li>
+        <li>Every night.</li>
+        <li>In real time, depending on the system.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>7. Data cleaning</h2>
+      <p>
+        Before building reports, data usually needs to be cleaned:
+      </p>
+      <ul>
+        <li>Remove duplicates.</li>
+        <li>Fix wrong dates or formats.</li>
+        <li>Fill or handle missing values.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>8. Good KPIs</h2>
+      <p>
+        Good KPIs should be:
+      </p>
+      <ul>
+        <li>Simple and easy to understand.</li>
+        <li>Directly connected to business goals.</li>
+        <li>Measurable and trackable over time.</li>
+      </ul>
+    </section>
+
+    <section class="page-section page-recap">
+      <h2>Level 12 – Recap</h2>
+      <ul>
+        <li>Data analytics helps make decisions based on data.</li>
+        <li><code>matplotlib</code> is used for charts in Python.</li>
+        <li>Monthly revenue is a common sales KPI.</li>
+        <li>Dashboards are for decision makers and managers.</li>
+        <li>Dashboards use data from databases and Excel/CSV.</li>
+        <li>Data can refresh automatically (e.g. every hour).</li>
+        <li>Data cleaning is essential before reporting.</li>
+        <li>KPIs must be simple and tied to business goals.</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+</body>
+</html>

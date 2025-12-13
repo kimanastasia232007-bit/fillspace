@@ -1,0 +1,136 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Learning Galaxy</title>
+
+    <!-- Optional: your own fonts file -->
+    <!-- <link rel="stylesheet" href="styles/fonts.css"> -->
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="styles/fonts.css">
+</head>
+<body>
+    <!-- ========= HEADER / NAV ========= -->
+    <header class="header">
+        <nav class="header__nav">
+            <div class="container">
+                <div class="header__container">
+                    <div class="logo">fillSpace</div>
+                    <ul class="header__nav-list">
+  <li><a href="index.html" class="header__nav-link">Galaxy</a></li>
+  <li><a href="sun.html" class="header__nav-link">Sun</a></li>
+  <li><a href="mercury.html" class="header__nav-link">Mercury</a></li>
+  <li><a href="venus.html" class="header__nav-link">Venus</a></li>
+  <li><a href="earth.html" class="header__nav-link">Earth</a></li>
+  <li><a href="mars.html" class="header__nav-link">Mars</a></li>
+  <li><a href="jupiter.html" class="header__nav-link">Jupiter</a></li>
+  <li><a href="saturn.html" class="header__nav-link">Saturn</a></li>
+  <li><a href="uran.html" class="header__nav-link">Uran</a></li>
+  <li><a href="neptune.html" class="header__nav-link">Neptune</a></li>
+  <li><a href="moon.html" class="header__nav-link">Moon</a></li>
+  <li><a href="meteorite.html" class="header__nav-link">Meteorite</a></li>
+  <li><a href="pluto.html" class="header__nav-link">Pluto</a></li>
+</ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========= INTRO SECTION ========= -->
+    <section class="intro">
+        <div class="container">
+            <h1 class="intro-title">THE LEARNING GALAXY</h1>
+            <p class="intro-subtitle">
+                Travel through the Solar System and answer Python & programming questions
+                to unlock each planet.
+            </p>
+      <a href="game.html" class="intro-link">Launch</a>
+
+        </div>
+    </section>
+
+    <!-- ========= GAMES GRID ========= -->
+    <section class="games" id="games">
+        <div class="container">
+            <h2 class="games-title">Choose Your Planet</h2>
+            <div class="box__games">
+                <div class="game1 game-card" id="game-1">
+                    <span class="game-title">Mercury · Level 1</span>
+                </div>
+                <div class="game2 game-card" id="game-2">
+                    <span class="game-title">Venus · Level 2</span>
+                </div>
+                <div class="game3 game-card" id="game-3">
+                    <span class="game-title">Earth · Level 3</span>
+                </div>
+                <div class="game4 game-card" id="game-4">
+                    <span class="game-title">Mars · Level 4</span>
+                </div>
+                <div class="game5 game-card" id="game-5">
+                    <span class="game-title">Jupiter · Level 5</span>
+                </div>
+                <div class="game6 game-card" id="game-6">
+                    <span class="game-title">Saturn · Level 6</span>
+                </div>
+                <div class="game7 game-card" id="game-7">
+                    <span class="game-title">Uran · Level 7</span>
+                </div>
+                <div class="game8 game-card" id="game-8">
+                    <span class="game-title">Neptune · Level 8</span>
+                </div>
+                <div class="game9 game-card" id="game-9">
+                    <span class="game-title">Pluto · Level 9</span>
+                </div>
+                <div class="game10 game-card" id="game-10">
+                    <span class="game-title">Sun · Level 10</span>
+                </div>
+                <div class="game11 game-card" id="game-11">
+                    <span class="game-title">Asteroid · Level 11</span>
+                </div>
+                <div class="game12 game-card" id="game-12">
+                    <span class="game-title">Moon · Level 12</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= QUIZ MODAL ========= -->
+    <div class="quiz-overlay" id="quiz-overlay">
+        <div class="quiz-window">
+            <button class="quiz-close" id="quiz-close">&times;</button>
+
+            <h2 class="quiz-title">Space Quiz</h2>
+            <p class="quiz-subtitle">
+                Answer questions about Python, programming and IT to pass this level.
+            </p>
+
+            <div class="quiz-status">
+                <span id="quiz-counter"></span>
+                <div class="quiz-progress">
+                    <div class="quiz-progress-inner" id="quiz-progress-inner"></div>
+                </div>
+                <span id="quiz-type-label"></span>
+            </div>
+
+            <div class="quiz-question-box">
+                <div class="quiz-question" id="quiz-question"></div>
+            </div>
+
+            <div class="quiz-options" id="quiz-options"></div>
+
+            <div class="quiz-controls" id="quiz-controls">
+                <button class="quiz-btn quiz-btn-secondary" id="quiz-back">Back</button>
+                <button class="quiz-btn quiz-btn-primary" id="quiz-next" disabled>Next</button>
+            </div>
+
+            <div class="quiz-results" id="quiz-results" hidden></div>
+        </div>
+    </div>
+
+    <!-- ========= SCRIPTS ========= -->
+    <script src="scripts/quiz.js"></script>
+</body>
+</html>

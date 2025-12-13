@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Learning Galaxy – Space Business Missions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+  <header class="header">
+    <nav class="header__nav">
+      <div class="container">
+        <div class="header__container">
+          <div class="logo">fillSpace</div>
+          <a href="index.html" class="header__nav-link">← Back to Galaxy</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="game-page">
+    <div class="container game-layout">
+
+      <!-- LEFT SIDE: TEXT / LORE -->
+      <section class="game-info">
+        <span class="game-pill">Mini game</span>
+        <h1 class="game-title-main">Space Business Missions</h1>
+        <p class="game-subtitle-main">
+          You are a neon spaceship consultant, travelling between planets and
+          helping companies make better <strong>Python & business programming</strong> decisions.
+        </p>
+        <p class="game-subtext">
+          For each mission, choose the best answer. Correct choices increase your
+          <strong>score</strong> and <strong>streak</strong>. At the end you’ll see how good
+          your cosmic dev instincts are.
+        </p>
+        <ul class="game-rules">
+          <li><strong>1 mission = 1 question</strong> about Python, IT or business logic.</li>
+          <li><strong>+10 points</strong> for a correct answer.</li>
+          <li>Streak grows when you answer correctly several times in a row.</li>
+        </ul>
+        <p class="game-hint">
+          Tip: imagine you are writing real code for a startup on Mars 🌌.
+        </p>
+      </section>
+
+      <!-- RIGHT SIDE: GAME PANEL -->
+      <section class="game-panel">
+        <!-- animated star background -->
+        <div class="game-panel-stars"></div>
+
+        <div class="game-panel-inner">
+          <div class="game-panel-topbar">
+            <div class="game-stat">
+              <span class="game-stat-label">Mission</span>
+              <span id="game-mission-counter" class="game-stat-value">1 / 10</span>
+            </div>
+            <div class="game-stat">
+              <span class="game-stat-label">Score</span>
+              <span id="game-score" class="game-stat-value">0</span>
+            </div>
+            <div class="game-stat">
+              <span class="game-stat-label">Streak</span>
+              <span id="game-streak" class="game-stat-value">0</span>
+            </div>
+          </div>
+
+          <!-- little ship icon -->
+          <div class="game-ship-orbit">
+            <div class="game-ship-orbit-ring"></div>
+            <div class="game-ship-orbit-dot"></div>
+            <div class="game-ship-icon">🚀</div>
+          </div>
+
+          <!-- small orbit markers -->
+          <div id="game-progress-orbits" class="game-progress-orbits"></div>
+
+          <!-- Neon progress bar -->
+          <div class="game-progress-bar">
+            <div id="game-progress-fill" class="game-progress-fill"></div>
+          </div>
+
+          <!-- question card -->
+          <div class="game-question-card">
+            <h2 id="game-question-title" class="game-question-title">
+              Mission 1: Warm-up
+            </h2>
+            <p id="game-question-text" class="game-question-text">
+              Loading mission from the central command...
+            </p>
+          </div>
+
+          <!-- answers -->
+          <div id="game-answers" class="game-answers"></div>
+
+          <!-- status + next button -->
+          <div class="game-bottom-row">
+            <div id="game-status" class="game-status">
+              Press “Start missions” to begin.
+            </div>
+            <button id="game-next-btn" class="quiz-btn quiz-btn-primary game-next-btn">
+              Start missions
+            </button>
+          </div>
+
+          <!-- answers -->
+          <div id="game-answers" class="game-answers"></div>
+
+          <!-- status + next button -->
+          <div class="game-bottom-row">
+            <div id="game-status" class="game-status">
+              Press “Start missions” to begin.
+            </div>
+            <button id="game-next-btn" class="quiz-btn quiz-btn-primary game-next-btn" disabled>
+              Start missions
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+    <!-- FINAL ANIMATION OVERLAY -->
+  <div class="game-end-overlay" id="game-end-overlay">
+    <div class="game-end-card">
+      <button class="game-end-close" id="game-end-close">×</button>
+
+      <div class="game-end-sky">
+        <div class="end-planet-glow"></div>
+
+        <div class="end-rocket end-rocket--1">🚀</div>
+        <div class="end-rocket end-rocket--2">🚀</div>
+
+        <div class="end-astronaut">🧑‍🚀</div>
+
+        <div class="end-star end-star--1"></div>
+        <div class="end-star end-star--2"></div>
+        <div class="end-star end-star--3"></div>
+      </div>
+
+      <div class="game-end-text">
+        <h2 id="end-title">Mission complete!</h2>
+        <p id="end-message">
+          You finished all missions. Your galactic business skills are impressive!
+        </p>
+
+        <button class="quiz-btn quiz-btn-primary" id="game-end-restart">
+          Play again
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/game.js"></script>
+</body>
+</html>
+
+  <script src="scripts/game.js"></script>
+</body>
+</html>

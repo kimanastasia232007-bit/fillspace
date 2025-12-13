@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mars · Level 4 – Functions & Modules</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+<header class="header">
+  <nav class="header__nav">
+    <div class="container">
+      <div class="header__container">
+        <div class="logo">fillSpace</div>
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Galaxy</a></li>
+          <li><a href="sun.html" class="header__nav-link">Sun</a></li>
+          <li><a href="mercury.html" class="header__nav-link">Mercury</a></li>
+          <li><a href="venus.html" class="header__nav-link">Venus</a></li>
+          <li><a href="earth.html" class="header__nav-link">Earth</a></li>
+          <li><a href="mars.html" class="header__nav-link">Mars</a></li>
+          <li><a href="jupiter.html" class="header__nav-link">Jupiter</a></li>
+          <li><a href="saturn.html" class="header__nav-link">Saturn</a></li>
+          <li><a href="uran.html" class="header__nav-link">Uran</a></li>
+          <li><a href="neptune.html" class="header__nav-link">Neptune</a></li>
+          <li><a href="moon.html" class="header__nav-link">Moon</a></li>
+          <li><a href="meteorite.html" class="header__nav-link">Meteorite</a></li>
+          <li><a href="pluto.html" class="header__nav-link">Pluto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="page-container">
+
+    <section class="page-hero">
+      <span class="page-hero-label">Cheatsheet</span>
+      <h1 class="page-hero-title">Mars · Level 4 – Functions &amp; Modules</h1>
+      <p class="page-hero-subtitle">
+        def, calling functions, return, imports and using modules like math.
+      </p>
+      <div class="page-hero-meta">
+        <span class="page-pill">def</span>
+        <span class="page-pill">return</span>
+        <span class="page-pill">import</span>
+        <span class="page-pill">modules</span>
+      </div>
+            <a href="index.html" class="page-back-link">Back to Galaxy</a>
+
+      <img src="images/mars.png"
+           alt="Mars"
+           class="page-planet-image">
+    </section>
+
+    </section>
+
+    <section class="page-section">
+      <h2>1. Defining a function: def</h2>
+      <p>
+        Use <code>def</code> to define a new function.
+      </p>
+      <div class="page-code">
+def greet():
+    print("Hello!")
+
+def add(a, b):
+    return a + b
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>2. Calling a function</h2>
+      <p>
+        To call a function named <code>greet</code>, use parentheses: <code>greet()</code>.
+      </p>
+      <div class="page-code">
+greet()          # function call
+result = add(2, 3)
+print(result)    # 5
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>3. Returning values: return</h2>
+      <p>
+        <code>return</code> sends a value back to the caller and ends the function.
+      </p>
+      <div class="page-code">
+def square(x):
+    return x * x
+
+print(square(4))  # 16
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>4. Where to put imports</h2>
+      <p>
+        Usually we place <code>import</code> statements at the top of the file.
+      </p>
+      <div class="page-code">
+import math
+import random
+
+# rest of the code...
+      </div>
+      <p>
+        This makes it easy to see which modules are used in the script.
+      </p>
+    </section>
+
+    <section class="page-section">
+      <h2>5. What does &quot;import math&quot; do?</h2>
+      <p>
+        <code>import math</code> loads the <code>math</code> module with functions like <code>sqrt</code>, <code>sin</code>, etc.
+      </p>
+      <div class="page-code">
+import math
+
+print(math.pi)        # 3.14159...
+print(math.sqrt(16))  # 4.0
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>6. Parameters and multiple arguments</h2>
+      <p>
+        A function can have zero, one or many parameters.
+      </p>
+      <div class="page-code">
+def welcome(name, city):
+    print("Hello", name, "from", city)
+
+welcome("Anna", "Tashkent")
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>7. Functions without return</h2>
+      <p>
+        If a function has no <code>return</code> statement, it returns <code>None</code> by default.
+      </p>
+      <div class="page-code">
+def do_nothing():
+    pass
+
+result = do_nothing()
+print(result)     # None
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>8. Importing your own modules</h2>
+      <p>
+        You can import your own Python files as modules (if they are in the same folder or package).
+      </p>
+      <div class="page-code">
+# file: helpers.py
+def add_one(x):
+    return x + 1
+
+# file: main.py
+import helpers
+
+print(helpers.add_one(10))  # 11
+      </div>
+    </section>
+
+    <section class="page-section page-recap">
+      <h2>Level 4 – Recap</h2>
+      <ul>
+        <li>Use <code>def</code> to define a function.</li>
+        <li>Call a function with parentheses: <code>greet()</code>.</li>
+        <li><code>return</code> sends a value back and ends the function.</li>
+        <li>Imports are usually at the top of the file.</li>
+        <li><code>import math</code> loads the math module.</li>
+        <li>Functions can have many parameters.</li>
+        <li>No <code>return</code> ⇒ function returns <code>None</code>.</li>
+        <li>You can import your own Python files as modules.</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+</body>
+</html>

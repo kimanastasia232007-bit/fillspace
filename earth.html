@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Earth · Level 3 – Conditions &amp; Loops</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+<header class="header">
+  <nav class="header__nav">
+    <div class="container">
+      <div class="header__container">
+        <div class="logo">fillSpace</div>
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Galaxy</a></li>
+          <li><a href="sun.html" class="header__nav-link">Sun</a></li>
+          <li><a href="mercury.html" class="header__nav-link">Mercury</a></li>
+          <li><a href="venus.html" class="header__nav-link">Venus</a></li>
+          <li><a href="earth.html" class="header__nav-link">Earth</a></li>
+          <li><a href="mars.html" class="header__nav-link">Mars</a></li>
+          <li><a href="jupiter.html" class="header__nav-link">Jupiter</a></li>
+          <li><a href="saturn.html" class="header__nav-link">Saturn</a></li>
+          <li><a href="uran.html" class="header__nav-link">Uran</a></li>
+          <li><a href="neptune.html" class="header__nav-link">Neptune</a></li>
+          <li><a href="moon.html" class="header__nav-link">Moon</a></li>
+          <li><a href="meteorite.html" class="header__nav-link">Meteorite</a></li>
+          <li><a href="pluto.html" class="header__nav-link">Pluto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="page-container">
+
+    <section class="page-hero">
+      <span class="page-hero-label">Cheatsheet</span>
+      <h1 class="page-hero-title">Earth · Level 3 – Conditions &amp; Loops</h1>
+      <p class="page-hero-subtitle">
+        if-statements, for/while loops, range(), break, continue, nesting.
+      </p>
+      <div class="page-hero-meta">
+        <span class="page-pill">if</span>
+        <span class="page-pill">for</span>
+        <span class="page-pill">while</span>
+        <span class="page-pill">break / continue</span>
+      </div>
+            <a href="index.html" class="page-back-link">Back to Galaxy</a>
+
+      <img src="images/earth.png"
+           alt="Earth"
+           class="page-planet-image">
+    </section>
+
+    </section>
+
+    <section class="page-section">
+      <h2>1. if – starting a conditional statement</h2>
+      <p>
+        Use <code>if</code> to execute code only when a condition is True.
+      </p>
+      <div class="page-code">
+x = 10
+if x &gt; 5:
+    print("x is greater than 5")
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>2. for-loop</h2>
+      <p>
+        Use <code>for</code> to iterate over a sequence (list, string, range, etc.).
+      </p>
+      <div class="page-code">
+for i in range(3):
+    print(i)
+# 0, 1, 2
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>3. break – stop the loop</h2>
+      <p>
+        <code>break</code> immediately exits the closest loop.
+      </p>
+      <div class="page-code">
+for i in range(10):
+    if i == 3:
+        break
+    print(i)
+# prints 0, 1, 2
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>4. range(3)</h2>
+      <p>
+        <code>range(3)</code> generates <code>0, 1, 2</code>.
+      </p>
+      <div class="page-code">
+for i in range(3):
+    print(i)
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>5. continue – skip to next iteration</h2>
+      <p>
+        <code>continue</code> skips the rest of the current iteration and moves to the next one.
+      </p>
+      <div class="page-code">
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
+# prints 0, 1, 3, 4
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>6. while loop can run forever</h2>
+      <p>
+        A <code>while</code> loop repeats while its condition is True.  
+        If the condition never becomes False, the loop can run forever.
+      </p>
+      <div class="page-code">
+while True:
+    print("infinite loop")  # be careful!

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meteorite · Level 11 – Web &amp; APIs in Business Apps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+<header class="header">
+  <nav class="header__nav">
+    <div class="container">
+      <div class="header__container">
+        <div class="logo">fillSpace</div>
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Galaxy</a></li>
+          <li><a href="sun.html" class="header__nav-link">Sun</a></li>
+          <li><a href="mercury.html" class="header__nav-link">Mercury</a></li>
+          <li><a href="venus.html" class="header__nav-link">Venus</a></li>
+          <li><a href="earth.html" class="header__nav-link">Earth</a></li>
+          <li><a href="mars.html" class="header__nav-link">Mars</a></li>
+          <li><a href="jupiter.html" class="header__nav-link">Jupiter</a></li>
+          <li><a href="saturn.html" class="header__nav-link">Saturn</a></li>
+          <li><a href="uran.html" class="header__nav-link">Uran</a></li>
+          <li><a href="neptune.html" class="header__nav-link">Neptune</a></li>
+          <li><a href="moon.html" class="header__nav-link">Moon</a></li>
+          <li><a href="meteorite.html" class="header__nav-link">Meteorite</a></li>
+          <li><a href="pluto.html" class="header__nav-link">Pluto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="page-container">
+
+    <section class="page-hero">
+      <span class="page-hero-label">Cheatsheet</span>
+      <h1 class="page-hero-title">Meteorite · Level 11 – Web &amp; APIs in Business Apps</h1>
+      <p class="page-hero-subtitle">
+        REST APIs, HTTP/HTTPS, Python requests, GET method and currency examples.
+      </p>
+      <div class="page-hero-meta">
+        <span class="page-pill">REST</span>
+        <span class="page-pill">HTTP</span>
+        <span class="page-pill">requests</span>
+        <span class="page-pill">JSON</span>
+      </div>
+           <a href="index.html" class="page-back-link">Back to Galaxy</a>
+
+      <img src="images/asteroid.png"
+           alt="Meteorite"
+           class="page-planet-image">
+    </section>
+
+    </section>
+
+    <section class="page-section">
+      <h2>1. What is a REST API?</h2>
+      <p>
+        A <strong>REST API</strong> is a web service that allows programs to communicate over HTTP/HTTPS.
+      </p>
+      <ul>
+        <li>Client sends a request to a URL.</li>
+        <li>Server returns data (often in JSON format).</li>
+        <li>Used by mobile apps, websites, and business systems.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>2. HTTP/HTTPS protocol</h2>
+      <p>
+        Web APIs usually use <strong>HTTP</strong> or <strong>HTTPS</strong>:
+      </p>
+      <ul>
+        <li><strong>HTTP</strong> – HyperText Transfer Protocol.</li>
+        <li><strong>HTTPS</strong> – HTTP with encryption (secure).</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>3. Python requests library</h2>
+      <p>
+        In Python, the <code>requests</code> library is commonly used to call web APIs.
+      </p>
+      <div class="page-code">
+import requests
+
+response = requests.get("https://api.example.com/data")
+print(response.status_code)
+print(response.json())
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>4. HTTP GET method</h2>
+      <p>
+        <strong>GET</strong> is the HTTP method typically used to request data from an API.
+      </p>
+      <div class="page-code">
+# GET request example
+requests.get("https://api.exchangerate.host/latest")
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>5. Currency exchange API example</h2>
+      <p>
+        A business can use an API to get daily currency exchange rates.  
+        This allows automatic price updates in different currencies.
+      </p>
+      <div class="page-code">
+import requests
+
+url = "https://api.exchangerate.host/latest?base=USD"
+data = requests.get(url).json()
+uzs_rate = data["rates"]["UZS"]
+print("1 USD =", uzs_rate, "UZS")
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>6. APIs connect systems</h2>
+      <p>
+        APIs allow different systems to share data automatically:
+      </p>
+      <ul>
+        <li>CRM ⇄ ERP.</li>
+        <li>Website ⇄ payment gateway.</li>
+        <li>Mobile app ⇄ backend server.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>7. JSON format</h2>
+      <p>
+        JSON = <strong>JavaScript Object Notation</strong> – a common data format for APIs.
+      </p>
+      <div class="page-code">
+{
+  "base": "USD",
+  "rates": {
+    "EUR": 0.92,
+    "UZS": 12700.0
+  }
+}
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>8. Why APIs are important for business</h2>
+      <p>
+        Without APIs, many modern integrations would be impossible or very slow:
+      </p>
+      <ul>
+        <li>Online payments.</li>
+        <li>Real-time shipping tracking.</li>
+        <li>Automatic updates in e-commerce platforms.</li>
+      </ul>
+    </section>
+
+    <section class="page-section page-recap">
+      <h2>Level 11 – Recap</h2>
+      <ul>
+        <li>REST API = web service for communication between programs.</li>
+        <li>APIs usually use HTTP/HTTPS.</li>
+        <li>Python <code>requests</code> is used for HTTP requests.</li>
+        <li><strong>GET</strong> is used to retrieve data from an API.</li>
+        <li>Currency APIs help update prices automatically.</li>
+        <li>APIs connect CRM, ERP, websites and mobile apps.</li>
+        <li>JSON is a common data format for APIs.</li>
+        <li>Modern business integrations depend heavily on APIs.</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+</body>
+</html>

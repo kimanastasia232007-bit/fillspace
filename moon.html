@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moon · Level 10 – Databases &amp; SQL for Business</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+<header class="header">
+  <nav class="header__nav">
+    <div class="container">
+      <div class="header__container">
+        <div class="logo">fillSpace</div>
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Galaxy</a></li>
+          <li><a href="sun.html" class="header__nav-link">Sun</a></li>
+          <li><a href="mercury.html" class="header__nav-link">Mercury</a></li>
+          <li><a href="venus.html" class="header__nav-link">Venus</a></li>
+          <li><a href="earth.html" class="header__nav-link">Earth</a></li>
+          <li><a href="mars.html" class="header__nav-link">Mars</a></li>
+          <li><a href="jupiter.html" class="header__nav-link">Jupiter</a></li>
+          <li><a href="saturn.html" class="header__nav-link">Saturn</a></li>
+          <li><a href="uran.html" class="header__nav-link">Uran</a></li>
+          <li><a href="neptune.html" class="header__nav-link">Neptune</a></li>
+          <li><a href="moon.html" class="header__nav-link">Moon</a></li>
+          <li><a href="meteorite.html" class="header__nav-link">Meteorite</a></li>
+          <li><a href="pluto.html" class="header__nav-link">Pluto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="page-container">
+
+    <section class="page-hero">
+      <span class="page-hero-label">Cheatsheet</span>
+      <h1 class="page-hero-title">Moon · Level 10 – Databases &amp; SQL for Business</h1>
+      <p class="page-hero-subtitle">
+        Why databases matter, SQL basics, primary keys and dashboards.
+      </p>
+      <div class="page-hero-meta">
+        <span class="page-pill">database</span>
+        <span class="page-pill">SQL</span>
+        <span class="page-pill">primary key</span>
+        <span class="page-pill">dashboards</span>
+      </div>
+            <a href="index.html" class="page-back-link">Back to Galaxy</a>
+
+      <img src="images/moon.png"
+           alt="Moon"
+           class="page-planet-image">
+    </section>
+
+    </section>
+
+    <section class="page-section">
+      <h2>1. Why use a database in business?</h2>
+      <p>
+        A <strong>database</strong> stores structured data (customers, orders, products) in an organized way.
+      </p>
+      <ul>
+        <li>Fast search and filtering.</li>
+        <li>Many users can work at the same time.</li>
+        <li>Data integrity and consistency.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>2. Relational database example</h2>
+      <p>
+        <strong>MySQL</strong> is an example of a relational database. Others: PostgreSQL, SQL Server, Oracle.
+      </p>
+    </section>
+
+    <section class="page-section">
+      <h2>3. SQL language</h2>
+      <p>
+        SQL = <strong>Structured Query Language</strong> – used to communicate with relational databases.
+      </p>
+      <div class="page-code">
+-- get all rows
+SELECT * FROM customers;
+
+-- get only names and cities
+SELECT name, city FROM customers;
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>4. Getting data from customers table</h2>
+      <p>
+        A typical query is:
+      </p>
+      <div class="page-code">
+SELECT * FROM customers;
+      </div>
+      <p>
+        Not <code>TAKE</code> or <code>GET</code> – <strong>SELECT</strong> is the correct SQL keyword.
+      </p>
+    </section>
+
+    <section class="page-section">
+      <h2>5. Primary key choice</h2>
+      <p>
+        A <strong>primary key</strong> uniquely identifies each row in a table.
+      </p>
+      <ul>
+        <li><code>customer_id</code> is a good primary key.</li>
+        <li>First name, email or city may not be unique.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>6. Excel vs database</h2>
+      <p>
+        One big Excel file is not always better:
+      </p>
+      <ul>
+        <li>Hard to control changes.</li>
+        <li>Easy to create inconsistent versions.</li>
+        <li>Not good for many users at the same time.</li>
+      </ul>
+      <p>
+        A database is usually safer for long-term business data.
+      </p>
+    </section>
+
+    <section class="page-section">
+      <h2>7. Databases help consistency</h2>
+      <p>
+        Databases support:
+      </p>
+      <ul>
+        <li>Constraints (NOT NULL, UNIQUE).</li>
+        <li>Relationships between tables.</li>
+        <li>Transactions – all or nothing updates.</li>
+      </ul>
+      <p>
+        This keeps business data in a consistent state.
+      </p>
+    </section>
+
+    <section class="page-section">
+      <h2>8. SQL + Python for dashboards</h2>
+      <p>
+        You can connect Python to a database, run SQL queries and build dashboards.
+      </p>
+      <div class="page-code">
+import pandas as pd
+import sqlalchemy as sa
+
+engine = sa.create_engine("mysql+pymysql://user:pwd@host/db")
+df = pd.read_sql("SELECT * FROM sales", engine)
+# use df in a dashboard
+      </div>
+    </section>
+
+    <section class="page-section page-recap">
+      <h2>Level 10 – Recap</h2>
+      <ul>
+        <li>Databases store structured business data.</li>
+        <li>MySQL is a relational database.</li>
+        <li>SQL is the main language for relational databases.</li>
+        <li>Use <code>SELECT * FROM customers;</code> to get all customers.</li>
+        <li><code>customer_id</code> is a good primary key.</li>
+        <li>Databases are better than one big Excel file for consistency.</li>
+        <li>Constraints and transactions keep data correct.</li>
+        <li>SQL + Python can power business dashboards.</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+</body>
+</html>

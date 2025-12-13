@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Venus · Level 2 – Data Types &amp; Structures</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+<header class="header">
+  <nav class="header__nav">
+    <div class="container">
+      <div class="header__container">
+        <div class="logo">fillSpace</div>
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Galaxy</a></li>
+          <li><a href="sun.html" class="header__nav-link">Sun</a></li>
+          <li><a href="mercury.html" class="header__nav-link">Mercury</a></li>
+          <li><a href="venus.html" class="header__nav-link">Venus</a></li>
+          <li><a href="earth.html" class="header__nav-link">Earth</a></li>
+          <li><a href="mars.html" class="header__nav-link">Mars</a></li>
+          <li><a href="jupiter.html" class="header__nav-link">Jupiter</a></li>
+          <li><a href="saturn.html" class="header__nav-link">Saturn</a></li>
+          <li><a href="uran.html" class="header__nav-link">Uran</a></li>
+          <li><a href="neptune.html" class="header__nav-link">Neptune</a></li>
+          <li><a href="moon.html" class="header__nav-link">Moon</a></li>
+          <li><a href="meteorite.html" class="header__nav-link">Meteorite</a></li>
+          <li><a href="pluto.html" class="header__nav-link">Pluto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="page-container">
+
+    <section class="page-hero">
+      <span class="page-hero-label">Cheatsheet</span>
+      <h1 class="page-hero-title">Venus · Level 2 – Data Types &amp; Structures</h1>
+      <p class="page-hero-subtitle">
+        Lists, tuples, sets, dictionaries, strings, floats and immutability.
+      </p>
+      <div class="page-hero-meta">
+        <span class="page-pill">list</span>
+        <span class="page-pill">tuple</span>
+        <span class="page-pill">dict</span>
+        <span class="page-pill">set</span>
+      </div>
+            <a href="index.html" class="page-back-link">Back to Galaxy</a>
+
+      <img src="images/venus.png"
+           alt="Venus"
+           class="page-planet-image">
+    </section>
+
+    </section>
+
+    <section class="page-section">
+      <h2>1. Lists in Python</h2>
+      <p>
+        A <strong>list</strong> is an ordered, changeable collection.
+        It uses square brackets <code>[]</code>.
+      </p>
+      <div class="page-code">
+numbers = [1, 2, 3]
+mixed = [1, "hello", True]
+
+print(numbers[0])    # 1
+numbers.append(4)    # [1, 2, 3, 4]
+      </div>
+      <p>
+        In the quiz, the correct list syntax is <code>[1, 2, 3]</code>.
+      </p>
+    </section>
+
+    <section class="page-section">
+      <h2>2. Immutable vs mutable</h2>
+      <p>
+        <strong>Mutable</strong> = can change after creation (e.g. list, dict, set).  
+        <strong>Immutable</strong> = cannot change (e.g. <strong>tuple</strong>, string, int).
+      </p>
+      <div class="page-code">
+t = (1, 2, 3)   # tuple, immutable
+# t[0] = 10     # error
+
+lst = [1, 2, 3] # list, mutable
+lst[0] = 10     # [10, 2, 3]
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>3. Dictionaries: key–value pairs</h2>
+      <p>
+        A <strong>dictionary</strong> stores key–value pairs, uses <code>{}</code>.
+      </p>
+      <div class="page-code">
+user = {
+    "name": "Anna",
+    "age": 20
+}
+
+print(user["name"])     # "Anna"
+user["age"] = 21        # change value
+      </div>
+      <p>
+        Dict is the correct answer for “type that stores key–value pairs”.
+      </p>
+    </section>
+
+    <section class="page-section">
+      <h2>4. Float type</h2>
+      <p>
+        A <strong>float</strong> is a number with a decimal point, e.g. <code>3.14</code>.
+      </p>
+      <div class="page-code">
+x = 3.14
+print(type(x))   # &lt;class 'float'&gt;
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>5. Converting to string: str()</h2>
+      <p>
+        Use <code>str()</code> to convert a value to a string.
+      </p>
+      <div class="page-code">
+age = 20
+text = "Age: " + str(age)
+print(text)    # "Age: 20"
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>6. Strings are immutable</h2>
+      <p>
+        You cannot change a single character in a string in-place.
+      </p>
+      <div class="page-code">
+s = "hello"
+# s[0] = "H"   # error
+s = "H" + s[1:]  # "Hello"
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>7. Sets and duplicates</h2>
+      <p>
+        A <strong>set</strong> is an unordered collection of unique values.
+      </p>
+      <div class="page-code">
+s = {1, 2, 2, 3}
+print(s)       # {1, 2, 3}
+      </div>
+      <p>
+        Sets automatically remove duplicates.
+      </p>
+    </section>
+
+    <section class="page-section">
+      <h2>8. Tuple as dict key</h2>
+      <p>
+        Because tuples are immutable, they can be used as dictionary keys.
+      </p>
+      <div class="page-code">
+points = {}
+key = (10, 20)     # tuple
+points[key] = "Player A"
+
+print(points[(10, 20)])  # "Player A"
+      </div>
+    </section>
+
+    <section class="page-section page-recap">
+      <h2>Level 2 – Recap</h2>
+      <ul>
+        <li>List: <code>[1, 2, 3]</code>, ordered and mutable.</li>
+        <li>Tuple: immutable, uses <code>()</code>.</li>
+        <li>Dict: key–value pairs, uses <code>{}</code>.</li>
+        <li>Float: decimal numbers like <code>3.14</code>.</li>
+        <li><code>str()</code> converts a value to string.</li>
+        <li>Strings and tuples are immutable.</li>
+        <li>Sets do not store duplicate values.</li>
+        <li>Tuples can be used as dictionary keys.</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mercury · Level 1 – Python Basics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+<header class="header">
+  <nav class="header__nav">
+    <div class="container">
+      <div class="header__container">
+        <div class="logo">fillSpace</div>
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Galaxy</a></li>
+          <li><a href="sun.html" class="header__nav-link">Sun</a></li>
+          <li><a href="mercury.html" class="header__nav-link">Mercury</a></li>
+          <li><a href="venus.html" class="header__nav-link">Venus</a></li>
+          <li><a href="earth.html" class="header__nav-link">Earth</a></li>
+          <li><a href="mars.html" class="header__nav-link">Mars</a></li>
+          <li><a href="jupiter.html" class="header__nav-link">Jupiter</a></li>
+          <li><a href="saturn.html" class="header__nav-link">Saturn</a></li>
+          <li><a href="uran.html" class="header__nav-link">Uran</a></li>
+          <li><a href="neptune.html" class="header__nav-link">Neptune</a></li>
+          <li><a href="moon.html" class="header__nav-link">Moon</a></li>
+          <li><a href="meteorite.html" class="header__nav-link">Meteorite</a></li>
+          <li><a href="pluto.html" class="header__nav-link">Pluto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="page-container">
+
+    <section class="page-hero">
+      <span class="page-hero-label">Cheatsheet</span>
+      <h1 class="page-hero-title">Mercury · Level 1 – Python Basics</h1>
+      <p class="page-hero-subtitle">
+        Comments, print(), file extension, booleans and basic expressions.
+      </p>
+      <div class="page-hero-meta">
+        <span class="page-pill"># comments</span>
+        <span class="page-pill">print()</span>
+        <span class="page-pill">.py</span>
+        <span class="page-pill">booleans</span>
+      </div>
+            <a href="index.html" class="page-back-link">Back to Galaxy</a>
+
+     <img src="images/mercury.png"
+     alt="Mercury"
+     class="page-planet-image page-planet-image--float-spin">
+
+    </section>
+
+    </section>
+
+    <section class="page-section">
+      <h2>1. Comments in Python</h2>
+      <p>
+        A <strong>comment</strong> starts with the <strong>#</strong> symbol.  
+        Everything after <code>#</code> on the same line is ignored by Python.
+      </p>
+      <div class="page-code">
+# This is a comment
+print("Hello")  # this part is also a comment
+      </div>
+      <ul>
+        <li>Use comments to explain what the code does.</li>
+        <li>Comments do not change the result of the program.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>2. Printing to the screen: print()</h2>
+      <p>
+        <code>print()</code> outputs text or values to the console.
+      </p>
+      <div class="page-code">
+print("Hello, world!")
+age = 18
+print("Age:", age)
+      </div>
+      <ul>
+        <li>You can print strings, numbers, variables and expressions.</li>
+        <li>Use commas to print multiple values in one call.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>3. Python file extension: .py</h2>
+      <p>
+        Python source files usually have the extension <strong>.py</strong>.
+      </p>
+      <ul>
+        <li><code>program.py</code></li>
+        <li><code>homework1.py</code></li>
+      </ul>
+      <p>
+        This tells the system and other people that this file contains Python code.
+      </p>
+    </section>
+
+    <section class="page-section">
+      <h2>4. Booleans: True / False</h2>
+      <p>
+        A <strong>boolean</strong> value represents truth: <code>True</code> or <code>False</code>.
+      </p>
+      <div class="page-code">
+is_student = True
+is_admin = False
+
+print(5 &gt; 3)     # True
+print(2 == 10)   # False
+      </div>
+      <p>
+        Booleans are used in <code>if</code>-statements and loops to control program flow.
+      </p>
+    </section>
+
+    <section class="page-section">
+      <h2>5. Converting a string to int: int("5")</h2>
+      <p>
+        <code>int("5")</code> converts the string <code>"5"</code> to the integer <code>5</code>.
+      </p>
+      <div class="page-code">
+text = "5"
+number = int(text)   # 5
+print(number + 3)    # 8
+      </div>
+      <ul>
+        <li>Works only if the string looks like an integer number.</li>
+        <li>If the string is not numeric (e.g. <code>"hello"</code>), it raises <code>ValueError</code>.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>6. Python is a high-level language</h2>
+      <p>
+        Python is called a <strong>high-level programming language</strong> because it is close
+        to human language and hides low-level details like memory management.
+      </p>
+      <ul>
+        <li>Easier to read and write.</li>
+        <li>Good for beginners and for rapid development.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <h2>7. Indentation matters</h2>
+      <p>
+        In Python, <strong>indentation is part of the syntax</strong>.
+        Blocks of code (inside <code>if</code>, <code>for</code>, functions, etc.) are defined by spaces.
+      </p>
+      <div class="page-code">
+if x &gt; 0:
+    print("Positive")   # indented block
+print("Done")           # outside the if
+      </div>
+      <p>
+        Wrong indentation can cause <code>IndentationError</code> or change program logic.
+      </p>
+    </section>
+
+    <section class="page-section">
+      <h2>8. Expression: 3 + 4 * 2</h2>
+      <p>
+        Python follows normal math precedence: multiplication before addition.
+      </p>
+      <div class="page-code">
+value = 3 + 4 * 2   # 3 + 8 = 11
+print(value)        # 11
+      </div>
+      <p>
+        Use parentheses to change the order:
+      </p>
+      <div class="page-code">
+value = (3 + 4) * 2   # 7 * 2 = 14
+      </div>
+    </section>
+
+    <section class="page-section page-recap">
+      <h2>Level 1 – Recap</h2>
+      <ul>
+        <li>Use <code>#</code> to start a comment.</li>
+        <li><code>print()</code> shows values on the screen.</li>
+        <li>Python files end with <code>.py</code>.</li>
+        <li>Booleans: <code>True</code> and <code>False</code>.</li>
+        <li><code>int("5")</code> returns integer <code>5</code>.</li>
+        <li>Python is high-level and uses indentation as syntax.</li>
+        <li><code>3 + 4 * 2</code> equals <code>11</code> (multiplication first).</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+</body>
+</html>
