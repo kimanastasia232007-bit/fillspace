@@ -1259,3 +1259,306 @@ a {
   opacity: 0.45;
   cursor: default;
 }
+ /* ===============================
+   GALAXY CALENDAR THEME (PRETTY)
+   =============================== */
+
+.cal-wrap{
+  padding: 48px 0 56px;
+  position: relative;
+}
+
+/* Starry / nebula layer */
+.cal-bg{
+  position:absolute;
+  inset: 0;
+  pointer-events:none;
+  opacity: .9;
+  filter: blur(0px);
+  background:
+    radial-gradient(900px 600px at 12% 18%, rgba(120, 150, 255, .22), transparent 60%),
+    radial-gradient(700px 500px at 86% 22%, rgba(0, 255, 200, .14), transparent 55%),
+    radial-gradient(900px 700px at 50% 86%, rgba(255, 120, 200, .12), transparent 60%),
+    radial-gradient(2px 2px at 15% 25%, rgba(255,255,255,.6), transparent 60%),
+    radial-gradient(1px 1px at 65% 32%, rgba(255,255,255,.55), transparent 60%),
+    radial-gradient(1px 1px at 82% 74%, rgba(255,255,255,.35), transparent 60%),
+    radial-gradient(1px 1px at 42% 68%, rgba(255,255,255,.40), transparent 60%);
+}
+
+/* Make content sit above background */
+.cal-wrap .container{
+  position: relative;
+  z-index: 1;
+}
+
+.cal-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.cal-title{
+  margin: 0;
+  font-size: clamp(22px, 3vw, 32px);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.cal-subtitle{
+  margin: 6px 0 0;
+  opacity: .78;
+  max-width: 520px;
+  line-height: 1.35;
+}
+
+/* Controls */
+.cal-controls{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  flex-wrap:wrap;
+}
+
+.cal-btn{
+  border: 1px solid rgba(255,255,255,.20);
+  background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
+  color: inherit;
+  padding: 10px 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform .12s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
+  box-shadow:
+    0 10px 26px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.12);
+  backdrop-filter: blur(10px);
+}
+
+.cal-btn:hover{
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,.34);
+  background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.06));
+  box-shadow:
+    0 14px 34px rgba(0,0,0,.22),
+    0 0 0 3px rgba(120,150,255,.08),
+    inset 0 1px 0 rgba(255,255,255,.12);
+}
+
+.cal-btn:active{
+  transform: translateY(0px);
+}
+
+/* Stats row */
+.cal-stats{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+.badge{
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 999px;
+  padding: 8px 12px;
+  display:inline-flex;
+  gap: 8px;
+  align-items:center;
+  background: rgba(255,255,255,.06);
+  box-shadow:
+    0 10px 26px rgba(0,0,0,.14),
+    inset 0 1px 0 rgba(255,255,255,.10);
+  backdrop-filter: blur(12px);
+}
+
+.badge strong{ font-weight: 800; }
+
+.fire{
+  display:none;
+  border: 1px solid rgba(255, 170, 60, .35);
+  background:
+    radial-gradient(120px 60px at 20% 40%, rgba(255,160,60,.22), transparent 70%),
+    rgba(255,255,255,.06);
+}
+
+.fire.show{
+  display:inline-flex;
+  animation: firePop .6s ease both;
+}
+
+@keyframes firePop{
+  0%{ transform: translateY(2px) scale(.98); opacity:.0; }
+  100%{ transform: translateY(0) scale(1); opacity:1; }
+}
+
+/* Grid */
+.cal-grid{
+  display:grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.dow{
+  opacity:.8;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 6px 6px;
+}
+
+/* Day cell (glassy card) */
+.day{
+  min-height: 96px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.14);
+  background:
+    radial-gradient(120px 90px at 18% 12%, rgba(120,150,255,.14), transparent 70%),
+    radial-gradient(120px 90px at 82% 18%, rgba(0,255,200,.10), transparent 70%),
+    rgba(255,255,255,.045);
+  padding: 12px 12px 10px;
+  position: relative;
+  overflow:hidden;
+  transition: transform .14s ease, border-color .18s ease, box-shadow .18s ease, background .18s ease;
+  box-shadow:
+    0 18px 44px rgba(0,0,0,.16),
+    inset 0 1px 0 rgba(255,255,255,.10);
+  backdrop-filter: blur(14px);
+}
+
+/* Slight shine streak */
+.day::before{
+  content:"";
+  position:absolute;
+  inset: -40% -60%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,.09), transparent);
+  transform: translateX(-45%) rotate(12deg);
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.day:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,.28);
+  box-shadow:
+    0 26px 60px rgba(0,0,0,.22),
+    0 0 0 3px rgba(120,150,255,.08),
+    inset 0 1px 0 rgba(255,255,255,.12);
+}
+
+.day:hover::before{ opacity: 1; }
+
+.day.muted{
+  opacity: .38;
+  background: rgba(255,255,255,.02);
+}
+
+/* Day number */
+.day .num{
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: .02em;
+  opacity: .95;
+}
+
+/* Meta row */
+.day .meta{
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: .90;
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  flex-wrap:wrap;
+}
+
+/* Pill badge */
+.pill{
+  border: 1px solid rgba(255,255,255,.16);
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: rgba(0,0,0,.16);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+/* Intensity levels (data-lvl="0..4") */
+.day[data-lvl="0"]{
+  background: rgba(255,255,255,.03);
+}
+.day[data-lvl="1"]{
+  background:
+    radial-gradient(130px 90px at 22% 18%, rgba(120,150,255,.16), transparent 70%),
+    rgba(255,255,255,.05);
+}
+.day[data-lvl="2"]{
+  background:
+    radial-gradient(150px 100px at 22% 18%, rgba(120,150,255,.22), transparent 70%),
+    radial-gradient(120px 90px at 78% 18%, rgba(0,255,200,.14), transparent 70%),
+    rgba(255,255,255,.06);
+}
+.day[data-lvl="3"]{
+  background:
+    radial-gradient(170px 120px at 22% 18%, rgba(120,150,255,.28), transparent 70%),
+    radial-gradient(140px 100px at 78% 18%, rgba(0,255,200,.18), transparent 70%),
+    rgba(255,255,255,.07);
+}
+.day[data-lvl="4"]{
+  background:
+    radial-gradient(180px 130px at 22% 18%, rgba(120,150,255,.34), transparent 70%),
+    radial-gradient(150px 110px at 78% 18%, rgba(0,255,200,.22), transparent 70%),
+    radial-gradient(160px 120px at 50% 86%, rgba(255,120,200,.16), transparent 70%),
+    rgba(255,255,255,.08);
+}
+
+/* Today ring (pretty) */
+.todayRing::after{
+  content:"";
+  position:absolute;
+  inset: 8px;
+  border-radius: 14px;
+  border: 1px dashed rgba(255,255,255,.48);
+  pointer-events:none;
+  box-shadow: 0 0 0 3px rgba(120,150,255,.08);
+}
+
+/* Footer / legend */
+.cal-foot{
+  margin-top: 16px;
+  display:flex;
+  justify-content:space-between;
+  gap: 12px;
+  flex-wrap:wrap;
+  opacity:.9;
+  font-size: 12px;
+}
+
+.legend{
+  display:flex;
+  align-items:center;
+  gap: 6px;
+  flex-wrap:wrap;
+}
+
+.box{
+  width: 14px;
+  height: 14px;
+  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.box.l0{ background: rgba(255,255,255,.03); }
+.box.l1{ background: rgba(120,150,255,.10); }
+.box.l2{ background: rgba(120,150,255,.16); }
+.box.l3{ background: rgba(0,255,200,.16); }
+.box.l4{ background: rgba(0,255,200,.22); }
+
+/* Responsive */
+@media (max-width: 520px){
+  .day{ min-height: 78px; padding: 10px; border-radius: 16px; }
+  .cal-grid{ gap: 8px; }
+  .cal-btn{ padding: 9px 12px; border-radius: 12px; }
+}
